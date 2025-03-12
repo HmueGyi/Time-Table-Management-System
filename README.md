@@ -8,9 +8,6 @@ The TimeTable Management System is a web-based platform designed to allow admini
 - **Admin Login**: Allows administrators to log in and manage timetable settings.
 - **Faculty Login**: Faculty members can log in to view their timetable and associated information.
 - **Dynamic Faculty Information**: Displays faculty details based on their department and designation.
-- **PDF Generation**: Downloadable timetable in PDF format.
-- **Contact Form**: Allows users to send messages via the contact form.
-- **Google Maps Integration**: Displays the university's location on Google Maps.
 
 ## Prerequisites
 
