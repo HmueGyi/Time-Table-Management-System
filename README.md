@@ -1,95 +1,60 @@
-# TimeTable Management System
+# Time Table Management System
 
 ## Overview
-The TimeTable Management System is a web-based platform designed to allow administrators and faculty to log in and manage the timetable for various departments. The system enables easy access to different departments' faculty information and supports user authentication for both Admin and Faculty members. It also includes a contact form and a Google Map integration for location details.
+The Time Table Management System is a web-based application designed to streamline the process of creating and managing timetables for educational institutions. It provides features for administrators, teachers, and students to interact with the system efficiently. The system aims to reduce manual effort, minimize errors, and ensure efficient utilization of resources.
 
 ## Features
-
-- **Admin Login**: Allows administrators to log in and manage timetable settings.
-- **Faculty Login**: Faculty members can log in to view their timetable and associated information.
-- **Dynamic Faculty Information**: Displays faculty details based on their department and designation.
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-- **PHP**: Version 7.4 or higher
-- **MySQL**: Version 5.7 or higher
-- **Bootstrap**: Used for the frontend styling
-- **jsPDF**: Used for PDF generation
-- **Google Maps API**: For location integration
-
-## Installation
-
-### Step 1: Clone the Repository
-
-Clone the repository to your local server or hosting platform.
-
-```bash
-git clone https://github.com/yourusername/timetable-management-system.git
-```
-
-### Step 2: Set Up Database
-
-Create a MySQL database named `ttms` and import the relevant tables for the timetable management system. Example SQL schema:
-
-```sql
-CREATE DATABASE ttms;
-
-USE ttms;
-
-CREATE TABLE teachers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    department VARCHAR(100) NOT NULL,
-    designation VARCHAR(100) NOT NULL
-);
-
--- Add other necessary tables like timetable, users, etc.
-```
-
-### Step 3: Update Database Connection
-
-Update the database connection details in the PHP script `connection.php`.
-
-```php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "ttms";
-```
-
-### Step 4: Configure Web Server
-
-Ensure that your web server (Apache or Nginx) is set up to serve PHP files and that the necessary permissions are granted to access the database.
-
-### Step 5: Access the Application
-
-Once the setup is complete, you can access the application by navigating to the URL of your server.
-
-```
-http://localhost/timetable-management-system/index.php
-```
-
-## Usage
-
-1. **Login as Admin**: Click the "Admin Login" button and enter the administrator credentials to manage the system.
-2. **Login as Faculty**: Click the "Teacher Login" button to enter faculty credentials and view department-specific timetable details.
-3. **Contact Form**: Fill out the contact form to get in touch with the system administrators.
-4. **Generate PDF**: Click the "Generate PDF" button to download the timetable as a PDF document.
+- **Classroom Management**: Add, update, and delete classrooms.
+- **Subject Management**: Manage subjects and their details.
+- **Teacher Management**: Add and manage teacher profiles.
+- **Timetable Generation**: Automatically generate timetables based on predefined rules.
+- **PDF Export**: Download generated timetables in PDF format.
+- **Role-Based Access**: Ensure secure access for administrators, teachers, and students.
+- **Responsive Design**: Access the system on various devices with a user-friendly interface.
 
 ## Technologies Used
+- **Backend**: PHP for server-side scripting.
+- **Database**: MySQL for data storage and retrieval.
+- **Frontend**: HTML, CSS, JavaScript for the user interface.
+- **Frameworks**: Bootstrap for responsive design.
 
-- **PHP** for server-side scripting
-- **MySQL** for database management
-- **Bootstrap** for responsive front-end design
-- **jsPDF** for generating PDF documents
-- **Google Maps API** for embedding a location map
+## Installation
+Refer to the [Installation Guide](install.md) for detailed steps to set up the system.
+
+## System Architecture
+The system follows a three-tier architecture:
+1. **Presentation Layer**: User interface built with HTML, CSS, and JavaScript.
+2. **Business Logic Layer**: PHP scripts for processing user requests and interacting with the database.
+3. **Data Layer**: MySQL database for storing application data.
+
+## Folder Structure
+- `files/`: Contains PHP scripts for various functionalities.
+  - `addclassrooms.php`: Script for managing classrooms.
+  - `addsubjects.php`: Script for managing subjects.
+  - `generatetimetable.php`: Script for generating timetables.
+  - `connection.php`: Database connection configuration.
+- `assets/`: Includes CSS, JavaScript, fonts, and images.
+  - `css/`: Stylesheets for the application.
+  - `js/`: JavaScript files for interactivity.
+  - `img/`: Images used in the application.
+- `ttms.sql`: Database schema for the application.
+
+## Usage
+1. **Administrator**:
+   - Add classrooms, subjects, and teachers.
+   - Allocate subjects and classrooms to teachers.
+   - Generate and download timetables.
+2. **Teacher**:
+   - View allocated subjects and classrooms.
+   - Download personal timetables.
+3. **Student**:
+   - View class timetables.
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 ## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-This project is open-source and available under the [MIT License](LICENSE).
-```
-
-### Customization
-- Adjust the database schema as needed to fit your requirements.
-- You can change the UI styles and layout by modifying the Bootstrap classes and custom CSS.
+## Contact
+For any queries or support, please contact the development team at [support@example.com](mailto:support@example.com).
